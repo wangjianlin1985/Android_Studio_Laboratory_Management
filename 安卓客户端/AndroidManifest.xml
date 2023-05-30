@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mobileclient.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+         android:targetSdkVersion="8"
+         /> 
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="com.mobileclient.app.Declare">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="MainActivity"></activity>
+        <activity android:name="MainStudentActivity"></activity>
+        <activity android:name="MainTeacherActivity"></activity>
+        <activity android:name="MoreActivity"></activity>
+        <activity android:name="AboutActivity"></activity>
+        <activity android:name="RegisterActivity"></activity>
+        <activity android:name="MainMenuActivity"></activity>
+        <activity android:name="LabInfoListActivity"></activity>
+        <activity android:name="LabInfoQueryActivity"></activity>
+        <activity android:name="LabInfoAddActivity"></activity>
+        <activity android:name="LabInfoEditActivity"></activity>
+        <activity android:name="LabInfoDetailActivity"></activity>
+        <activity android:name="LatStateListActivity"></activity>
+        <activity android:name="LatStateQueryActivity"></activity>
+        <activity android:name="LatStateAddActivity"></activity>
+        <activity android:name="LatStateEditActivity"></activity>
+        <activity android:name="LatStateDetailActivity"></activity>
+        <activity android:name="ClassInfoListActivity"></activity>
+        <activity android:name="ClassInfoQueryActivity"></activity>
+        <activity android:name="ClassInfoAddActivity"></activity>
+        <activity android:name="ClassInfoEditActivity"></activity>
+        <activity android:name="ClassInfoDetailActivity"></activity>
+        <activity android:name="StudentListActivity"></activity>
+        <activity android:name="StudentQueryActivity"></activity>
+        <activity android:name="StudentAddActivity"></activity>
+        <activity android:name="StudentEditActivity"></activity>
+        <activity android:name="StudentDetailActivity"></activity>
+        <activity android:name="TeacherListActivity"></activity>
+        <activity android:name="TeacherQueryActivity"></activity>
+        <activity android:name="TeacherAddActivity"></activity>
+        <activity android:name="TeacherEditActivity"></activity>
+        <activity android:name="TeacherDetailActivity"></activity>
+        <activity android:name="CourseListActivity"></activity>
+        <activity android:name="CourseStudentListActivity"></activity>
+        <activity android:name="CourseTeacherListActivity"></activity>
+        <activity android:name="CourseQueryActivity"></activity>
+        <activity android:name="CourseAddActivity"></activity>
+        <activity android:name="CourseEditActivity"></activity>
+        <activity android:name="CourseDetailActivity"></activity>
+        <activity android:name="CourseTestListActivity"></activity>
+        <activity android:name="CourseTestStudentListActivity"></activity>
+        <activity android:name="CourseTestTeacherListActivity"></activity>
+        <activity android:name="CourseTestQueryActivity"></activity>
+        <activity android:name="CourseTestAddActivity"></activity>
+        <activity android:name="CourseTestTeacherAddActivity"></activity>
+        <activity android:name="CourseTestEditActivity"></activity>
+        <activity android:name="CourseTestDetailActivity"></activity>
+        <activity android:name="WeekInfoListActivity"></activity>
+        <activity android:name="WeekInfoQueryActivity"></activity>
+        <activity android:name="WeekInfoAddActivity"></activity>
+        <activity android:name="WeekInfoEditActivity"></activity>
+        <activity android:name="WeekInfoDetailActivity"></activity>
+        <activity android:name="DeviceListActivity"></activity>
+        <activity android:name="DeviceQueryActivity"></activity>
+        <activity android:name="DeviceAddActivity"></activity>
+        <activity android:name="DeviceEditActivity"></activity>
+        <activity android:name="DeviceDetailActivity"></activity>
+
+        <activity android:name="photoListActivity"></activity>
+        <activity android:name="fileListActivity"></activity>
+    </application>
+
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+
+	<!-- 文件读写权限 -->
+	
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"></uses-permission>
+	
+	
+</manifest>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Device" table="Device">
+
+          <!-- 主键设备id -->
+          <id name="deviceId" column="deviceId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单字符串属性: 设备名称 -->
+          <property
+            name="deviceName"
+            column="deviceName"
+            type="string"
+            length="40"
+          />
+
+          <!-- 多对一属性: 所属实验室 -->
+          <many-to-one name="labObj"
+            column="labObj"
+            class="LabInfo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单图片属性: 设备图片 -->
+          <property
+            name="devicePhoto"
+            column="devicePhoto"
+            type="string"
+            length="50"
+          />
+
+          <!-- 简单浮点型属性: 设备价格 -->
+          <property
+            name="devicePrice"
+            column="devicePrice"
+            type="float"
+          />
+
+          <!-- 简单整型属性: 设备数量 -->
+          <property
+            name="deviceCount"
+            column="deviceCount"
+            type="int"
+
+          />
+
+          <!-- 简单字符串属性: 设备描述 -->
+          <property
+            name="deviceDesc"
+            column="deviceDesc"
+            type="string"
+            length="500"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

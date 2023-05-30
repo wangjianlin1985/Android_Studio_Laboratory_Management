@@ -1,0 +1,76 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="LabInfo" table="LabInfo">
+
+          <!-- 主键实验室id -->
+          <id name="labId" column="labId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单字符串属性: 实验室名称 -->
+          <property
+            name="labName"
+            column="labName"
+            type="string"
+            length="60"
+          />
+
+          <!-- 简单图片属性: 实验室图片 -->
+          <property
+            name="labPhoto"
+            column="labPhoto"
+            type="string"
+            length="50"
+          />
+
+          <!-- 简单浮点型属性: 实验室面积 -->
+          <property
+            name="labArea"
+            column="labArea"
+            type="float"
+          />
+
+          <!-- 简单整型属性: 容纳人数 -->
+          <property
+            name="personNum"
+            column="personNum"
+            type="int"
+
+          />
+
+          <!-- 简单字符串属性: 实验室地址 -->
+          <property
+            name="labAddress"
+            column="labAddress"
+            type="string"
+            length="50"
+          />
+
+          <!-- 多对一属性: 实验室状态 -->
+          <many-to-one name="labStateObj"
+            column="labStateObj"
+            class="LatState"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 实验室介绍 -->
+          <property
+            name="labDesc"
+            column="labDesc"
+            type="string"
+            length="2000"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

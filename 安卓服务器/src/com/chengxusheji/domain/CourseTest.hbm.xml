@@ -1,0 +1,71 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="CourseTest" table="CourseTest">
+
+          <!-- 主键实验id -->
+          <id name="testId" column="testId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 多对一属性: 所属课程 -->
+          <many-to-one name="courseObj"
+            column="courseObj"
+            class="Course"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 实验名称 -->
+          <property
+            name="testName"
+            column="testName"
+            type="string"
+            length="30"
+          />
+
+          <!-- 多对一属性: 上课周 -->
+          <many-to-one name="weekObj"
+            column="weekObj"
+            class="WeekInfo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 实验时间 -->
+          <property
+            name="labTime"
+            column="labTime"
+            type="string"
+            length="20"
+          />
+
+          <!-- 多对一属性: 上课实验室 -->
+          <many-to-one name="labObj"
+            column="labObj"
+            class="LabInfo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 实验备注 -->
+          <property
+            name="testMemo"
+            column="testMemo"
+            type="string"
+            length="500"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

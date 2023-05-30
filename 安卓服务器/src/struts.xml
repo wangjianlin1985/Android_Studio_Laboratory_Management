@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <constant name="struts.i18n.encoding" value="gbk"/>
+     <constant name="struts.devMode" value="true" />
+     <!--Struts2中Action对象的创建交给spring完成-->
+     <constant name="struts.objectFactory" value="spring" />   
+       
+          
+	 <package name="login" namespace="/login" extends="struts-default">
+	        <action name="login_*" class="loginAction" method="{1}">
+	        	<result name="main_view">/main.jsp</result>
+	        	<result name="error">/error.jsp</result>
+	        	<result name="input">/login.jsp</result> 
+	        	<result name="login_view">/login.jsp</result>
+	          
+	        </action>  
+	 </package>
+	 
+         <!-- LabInfoAction配置 -->
+         <package name="LabInfo" namespace="/LabInfo" extends="struts-default">
+           <action name="LabInfo_*" class="labInfoAction" method="{1}">
+             <result name="add_view">/LabInfo_add.jsp</result>
+             <result name="input">/LabInfo_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/LabInfo_query_result.jsp</result>
+             <result name="front_query_view">/LabInfo_frontquery_result.jsp</result>
+             <result name="front_show_view">/LabInfo_frontshow.jsp</result>
+             <result name="modify_view">/LabInfo_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- LatStateAction配置 -->
+         <package name="LatState" namespace="/LatState" extends="struts-default">
+           <action name="LatState_*" class="latStateAction" method="{1}">
+             <result name="add_view">/LatState_add.jsp</result>
+             <result name="input">/LatState_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/LatState_query_result.jsp</result>
+             <result name="front_query_view">/LatState_frontquery_result.jsp</result>
+             <result name="front_show_view">/LatState_frontshow.jsp</result>
+             <result name="modify_view">/LatState_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- ClassInfoAction配置 -->
+         <package name="ClassInfo" namespace="/ClassInfo" extends="struts-default">
+           <action name="ClassInfo_*" class="classInfoAction" method="{1}">
+             <result name="add_view">/ClassInfo_add.jsp</result>
+             <result name="input">/ClassInfo_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/ClassInfo_query_result.jsp</result>
+             <result name="front_query_view">/ClassInfo_frontquery_result.jsp</result>
+             <result name="front_show_view">/ClassInfo_frontshow.jsp</result>
+             <result name="modify_view">/ClassInfo_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- StudentAction配置 -->
+         <package name="Student" namespace="/Student" extends="struts-default">
+           <action name="Student_*" class="studentAction" method="{1}">
+             <result name="add_view">/Student_add.jsp</result>
+             <result name="input">/Student_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/Student_query_result.jsp</result>
+             <result name="front_query_view">/Student_frontquery_result.jsp</result>
+             <result name="front_show_view">/Student_frontshow.jsp</result>
+             <result name="modify_view">/Student_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- TeacherAction配置 -->
+         <package name="Teacher" namespace="/Teacher" extends="struts-default">
+           <action name="Teacher_*" class="teacherAction" method="{1}">
+             <result name="add_view">/Teacher_add.jsp</result>
+             <result name="input">/Teacher_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/Teacher_query_result.jsp</result>
+             <result name="front_query_view">/Teacher_frontquery_result.jsp</result>
+             <result name="front_show_view">/Teacher_frontshow.jsp</result>
+             <result name="modify_view">/Teacher_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- CourseAction配置 -->
+         <package name="Course" namespace="/Course" extends="struts-default">
+           <action name="Course_*" class="courseAction" method="{1}">
+             <result name="add_view">/Course_add.jsp</result>
+             <result name="input">/Course_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/Course_query_result.jsp</result>
+             <result name="front_query_view">/Course_frontquery_result.jsp</result>
+             <result name="front_show_view">/Course_frontshow.jsp</result>
+             <result name="modify_view">/Course_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- CourseTestAction配置 -->
+         <package name="CourseTest" namespace="/CourseTest" extends="struts-default">
+           <action name="CourseTest_*" class="courseTestAction" method="{1}">
+             <result name="add_view">/CourseTest_add.jsp</result>
+             <result name="input">/CourseTest_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/CourseTest_query_result.jsp</result>
+             <result name="front_query_view">/CourseTest_frontquery_result.jsp</result>
+             <result name="front_show_view">/CourseTest_frontshow.jsp</result>
+             <result name="modify_view">/CourseTest_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- WeekInfoAction配置 -->
+         <package name="WeekInfo" namespace="/WeekInfo" extends="struts-default">
+           <action name="WeekInfo_*" class="weekInfoAction" method="{1}">
+             <result name="add_view">/WeekInfo_add.jsp</result>
+             <result name="input">/WeekInfo_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/WeekInfo_query_result.jsp</result>
+             <result name="front_query_view">/WeekInfo_frontquery_result.jsp</result>
+             <result name="front_show_view">/WeekInfo_frontshow.jsp</result>
+             <result name="modify_view">/WeekInfo_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- DeviceAction配置 -->
+         <package name="Device" namespace="/Device" extends="struts-default">
+           <action name="Device_*" class="deviceAction" method="{1}">
+             <result name="add_view">/Device_add.jsp</result>
+             <result name="input">/Device_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/Device_query_result.jsp</result>
+             <result name="front_query_view">/Device_frontquery_result.jsp</result>
+             <result name="front_show_view">/Device_frontshow.jsp</result>
+             <result name="modify_view">/Device_modify.jsp</result>
+           </action>
+         </package>
+
+
+	 
+	 
+
+ 	 <package name="password" namespace="/password" extends="struts-default">
+	        <action name="ChangePassword" class="changePasswordAction">  
+	        	<result name="change_success">/message.jsp</result>
+	        	<result name="error">/error.jsp</result> 
+	        </action>  
+	 </package> 
+	  
+	 <package name="User" namespace="/User" extends="struts-default">
+	        <action name="User_*" class="com.chengxusheji.action.UserAction" method="{1}">  
+	        	<result name="user_query_view">/user_query_result.jsp</result>
+	        	<result name="success">/message.jsp</result>
+	        	<result name="error">/error.jsp</result> 
+	        </action>  
+	 </package>  
+	 
+</struts>
